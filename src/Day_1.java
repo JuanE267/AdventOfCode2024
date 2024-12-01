@@ -1,4 +1,3 @@
-import java.awt.image.TileObserver;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
@@ -29,8 +28,8 @@ public class Day_1 {
 
     public static int findingSmallerNumber(List<Integer> list){
         int min = list.getFirst();
-        for (int i = 0; i < list.size(); i++){
-            min = (list.get(i) > min)? min: list.get(i);
+        for (Integer n : list) {
+            min = (n > min) ? min : n;
         }
         return min;
     }
@@ -66,7 +65,7 @@ public class Day_1 {
 
         int totalDistance = 0;
 
-        while(leftList.size() != 0 || rightList.size() != 0){
+        while(leftList.isEmpty() || rightList.isEmpty()){
 
             int first = findingSmallerNumber(leftList);
             int second = findingSmallerNumber(rightList);
