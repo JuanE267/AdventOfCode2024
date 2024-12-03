@@ -65,7 +65,7 @@ public class Day_1 {
 
         int totalDistance = 0;
 
-        while(leftList.isEmpty() || rightList.isEmpty()){
+        while(!leftList.isEmpty() || !rightList.isEmpty()){
 
             int first = findingSmallerNumber(leftList);
             int second = findingSmallerNumber(rightList);
