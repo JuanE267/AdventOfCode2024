@@ -14,17 +14,18 @@ public class Day_2 {
     public static void readingFile(List<List<Integer>> list) {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("dayTwoInput.txt"));
-            String data = reader.readLine();
+            String line = reader.readLine();
 
-            while (data != null) {
-                String[] dataArray = data.split("\\s+");
+            while (line != null) {
+                String[] dataArray = line.split("\\s+");
                 List<Integer> internalList = new ArrayList<>();
                 for (String n : dataArray) {
                     internalList.add(Integer.parseInt(n));
                 }
                 list.add(internalList);
-                data = reader.readLine();
+                line = reader.readLine();
             }
+            reader.close();
 
         } catch (Exception e) {
             e.printStackTrace();
